@@ -18,7 +18,7 @@ export default function Post({ post }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get(`/users?userId=${post.userId}`);
+      const response = await axios.get(`https://keitaro-sns-backend.herokuapp.com/api/users?userId=${post.userId}`);
       setUser(response.data);
     };
     fetchUser();
