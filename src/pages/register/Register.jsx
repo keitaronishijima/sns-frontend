@@ -23,7 +23,8 @@ const Register = () => {
           email: email.current.value,
           password: password.current.value,
         };
-        await axios.post("/auth/register", user);
+        console.log(user);
+        await axios.post("https://keitaro-sns-backend.herokuapp.com/api/auth/register", user);
         navigate("/login");
       } catch (err) {
         console.log(err);

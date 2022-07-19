@@ -16,6 +16,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
+    "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
@@ -47,4 +48,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }}
+  },
+  "proxy": "https://keitaro-sns-backend.herokuapp.com/api/"
+}
