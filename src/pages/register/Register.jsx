@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Register.css";
 const Register = () => {
   const username = useRef();
@@ -24,7 +25,10 @@ const Register = () => {
           password: password.current.value,
         };
         console.log(user);
-        await axios.post("https://keitaro-sns-backend.herokuapp.com/api/auth/register", user);
+        await axios.post(
+          "https://keitaro-sns-backend.herokuapp.com/api/auth/register",
+          user
+        );
         navigate("/login");
       } catch (err) {
         console.log(err);
@@ -75,7 +79,9 @@ const Register = () => {
             <button className="loginButton" type="submit">
               Sign up
             </button>
-            <button className="loginRegisterButton">Login</button>
+            <Link to="/login">
+              <button className="loginRegisterButton">Login</button>
+            </Link>
           </form>
         </div>
       </div>
