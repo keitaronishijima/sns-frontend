@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef, useContext } from "react";
+import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Register.css";
 const Register = () => {
@@ -22,7 +22,7 @@ const Register = () => {
           username: username.current.value,
           email: email.current.value,
           password: password.current.value,
-        }
+        };
         await axios.post("/auth/register", user);
         navigate("/login");
       } catch (err) {
