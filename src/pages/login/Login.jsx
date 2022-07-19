@@ -2,6 +2,7 @@ import React, { useRef, useContext } from "react";
 import { AuthContext } from "../../state/AuthContext";
 import { loginCall } from "../../actionCalls";
 import "./Login.css";
+import { Navigate } from "react-router-dom";
 const Login = () => {
   const email = useRef();
   const password = useRef();
@@ -16,6 +17,7 @@ const Login = () => {
       },
       dispatch
     );
+    Navigate("/user")
   };
   
   return (
