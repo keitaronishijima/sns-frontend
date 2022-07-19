@@ -16,7 +16,7 @@ const Profile = () => {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const response = await axios.get(`/users?username=${username}`);
+      const response = await axios.get(`https://keitaro-sns-backend.herokuapp.com/api/users?username=${username}`);
       console.log(response.data);
       setUser(response.data);
     };
