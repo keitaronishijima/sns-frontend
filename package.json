@@ -48,5 +48,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://keitaro-sns-backend.herokuapp.com/api"
+  "proxy": "https://keitaro-sns-backend.herokuapp.com"
 }
